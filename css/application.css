@@ -132,7 +132,7 @@ body {
     -webkit-user-select: none;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    margin: 0 auto;z
 }
 i {
     font-style: none;
@@ -150,8 +150,15 @@ b {
 .dark-text .home, .dark-text .main-return, .dark-text .options, .dark-text .title {
     color: rgba(0, 0, 0, 0.3);
 }
+
+.unsplash .dark-text .home, .unsplash .dark-text .main-return, .unsplash .dark-text .options, .unsplash .dark-text .title {
+    color: rgba(0, 0, 0, 0.5);
+}
 .dark-text .wunder path {
     fill: rgba(0, 0, 0, 0.3);
+}
+.unsplash .dark-text .wunder path {
+    fill: rgba(0, 0, 0, 0.5);
 }
 .dark-text .home:hover, .dark-text .main-return:hover, .dark-text .options:hover {
     color: rgba(0, 0, 0, 0.7);
@@ -172,9 +179,18 @@ b {
 .light-text .home, .light-text .main-return, .light-text .options, .light-text .title {
     color: rgba(0, 0, 0, 0.3);
 }
+
+.unsplash .light-text .home, .unsplash .light-text .main-return, .unsplash .light-text .options, .unsplash .light-text .title {
+    color: rgba(0, 0, 0, 0.5);
+}
 .light-text .wunder path {
     fill: rgba(0, 0, 0, 0.3);
 }
+
+.unsplash .light-text .wunder path {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
 .light-text .home:hover, .light-text .main-return:hover, .light-text .options:hover {
     color: #fff;
 }
@@ -271,6 +287,7 @@ b {
     width: 840px;
     height: 608px;
     position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
     margin-top: -304px;

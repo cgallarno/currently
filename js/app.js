@@ -245,7 +245,8 @@ var Storage = {
       location: {}, // Used to store you own location.
       animation: true,
       textColor: "light-text",
-      color: "dark-bg"
+      color: "dark-bg",
+      unsplash: true
     }
   },
 
@@ -281,6 +282,7 @@ var Storage = {
   save: function(type, data) {
     var deferred = Q.defer();
     var key = Storage[type].key;
+    console.log('called save:', data);
     function _save(current) {
       var saveData = {};
       if (!_.isNull(current)) {
@@ -867,6 +869,11 @@ function style() {
     // Remove weather
     if (!options.weather) {
       $('#main #weather').addClass('hidden');
+    }
+
+    console.log('Options', options);
+    if(options.unsplash){
+      $('body').addClass('unsplash');
     }
   });
 }
